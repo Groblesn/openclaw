@@ -16,10 +16,7 @@ export function logVerbose(message: string) {
   } catch {
     // ignore logger failures to avoid breaking verbose printing
   }
-  if (!isVerbose()) {
-    return;
-  }
-  console.log(theme.muted(message));
+  logVerboseConsole(message);
 }
 
 export function logVerboseConsole(message: string) {
